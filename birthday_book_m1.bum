@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="birthday_book_m0"/>
+<org.eventb.core.seesContext name="*" org.eventb.core.target="birthday_book_c0"/>
+<org.eventb.core.variable name="(" org.eventb.core.identifier="BIRTHDAY"/>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="KNOWN"/>
+<org.eventb.core.variable name="2" org.eventb.core.identifier="CARDS"/>
+<org.eventb.core.event name="3" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="PERSON_SET ≔ ∅" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="DATE_SET ≔ ∅" org.eventb.core.label="act5"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="S ≔ 0" org.eventb.core.label="act6"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="NEW_CARDS ≔ ∅" org.eventb.core.label="act7"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="4" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ADD_BIRTHDAY">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ADD_BIRTHDAY"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="S ≔ S + 1" org.eventb.core.comment="Sets S to 1 initially" org.eventb.core.label="act3"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="PERSON_SET ≔ PERSON_SET ∪ {S+1 ↦ name}" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="DATE_SET ≔ DATE_SET ∪ {S+1 ↦ date}" org.eventb.core.label="act5"/>
+<org.eventb.core.guard name="+" org.eventb.core.comment="MAYBE: Person is not in range of PERSON_SET, thus person is not already 'known'" org.eventb.core.label="grd4" org.eventb.core.predicate="name ∉ ran(PERSON_SET)"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="5" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="CHANGE_BIRTHDAY">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="CHANGE_BIRTHDAY"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd4" org.eventb.core.predicate="S &gt; 0"/>
+<org.eventb.core.guard name="*" org.eventb.core.comment="Person is in the PERSON_SET" org.eventb.core.label="grd5" org.eventb.core.predicate="name ∈ ran(PERSON_SET)"/>
+<org.eventb.core.guard name="," org.eventb.core.comment="There exists exactly 1 person with name in PERSON_SET" org.eventb.core.label="grd6" org.eventb.core.predicate="card(dom(PERSON_SET ▷ {name})) = 1"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="DATE_SET ≔ DATE_SET  {min(PERSON_SET∼[ran(PERSON_SET ▷ {name})]) ↦ date}" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="6" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="REMIND">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="REMIND"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="S &gt; 0"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="NEW_CARDS ≔ ran (DATE_SET∼[{date}] ◁ PERSON_SET) " org.eventb.core.comment="Add the set of people with the same birthday as date" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="7" org.eventb.core.identifier="PERSON_SET"/>
+<org.eventb.core.variable name="8" org.eventb.core.identifier="DATE_SET"/>
+<org.eventb.core.invariant name="9" org.eventb.core.label="inv1" org.eventb.core.predicate="PERSON_SET ∈ 1‥S → PERSON"/>
+<org.eventb.core.invariant name=":" org.eventb.core.label="inv2" org.eventb.core.predicate="DATE_SET ∈ 1‥S → DATE"/>
+<org.eventb.core.variable name=";" org.eventb.core.identifier="S"/>
+<org.eventb.core.invariant name="=" org.eventb.core.label="inv3" org.eventb.core.predicate="S ∈ ℕ "/>
+<org.eventb.core.invariant name="&gt;" org.eventb.core.comment="KNOWN is the set of all people in PERSON_SET" org.eventb.core.label="inv4" org.eventb.core.predicate="{n∣ n ∈ PERSON ∧ n ∈ ran(PERSON_SET)} = KNOWN"/>
+<org.eventb.core.invariant name="?" org.eventb.core.label="inv5" org.eventb.core.predicate="NEW_CARDS ⊆ ran(PERSON_SET)"/>
+<org.eventb.core.variable name="@" org.eventb.core.identifier="NEW_CARDS"/>
+</org.eventb.core.machineFile>

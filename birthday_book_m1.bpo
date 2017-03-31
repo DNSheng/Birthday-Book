@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="87">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="18">
+<org.eventb.core.poIdentifier name="DATE" org.eventb.core.type="ℙ(DATE)"/>
+<org.eventb.core.poIdentifier name="PERSON" org.eventb.core.type="ℙ(PERSON)"/>
+<org.eventb.core.poPredicate name="PERSOO" org.eventb.core.predicate="finite(PERSON)" org.eventb.core.source="/Birthday Book/birthday_book_c0.buc|org.eventb.core.contextFile#birthday_book_c0|org.eventb.core.axiom#)"/>
+<org.eventb.core.poPredicate name="PERSOP" org.eventb.core.predicate="finite(DATE)" org.eventb.core.source="/Birthday Book/birthday_book_c0.buc|org.eventb.core.contextFile#birthday_book_c0|org.eventb.core.axiom#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="77">
+<org.eventb.core.poIdentifier name="BIRTHDAY" org.eventb.core.type="ℙ(PERSON×DATE)"/>
+<org.eventb.core.poIdentifier name="CARDS" org.eventb.core.type="ℙ(PERSON)"/>
+<org.eventb.core.poIdentifier name="DATE_SET" org.eventb.core.type="ℙ(ℤ×DATE)"/>
+<org.eventb.core.poIdentifier name="KNOWN" org.eventb.core.type="ℙ(PERSON)"/>
+<org.eventb.core.poIdentifier name="NEW_CARDS" org.eventb.core.type="ℙ(PERSON)"/>
+<org.eventb.core.poIdentifier name="PERSON_SET" org.eventb.core.type="ℙ(ℤ×PERSON)"/>
+<org.eventb.core.poIdentifier name="S" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="PERSON_SEU" org.eventb.core.predicate="BIRTHDAY∈PERSON ⇸ DATE" org.eventb.core.source="/Birthday Book/birthday_book_m0.bum|org.eventb.core.machineFile#birthday_book_m0|org.eventb.core.invariant#)"/>
+<org.eventb.core.poPredicate name="PERSON_SEV" org.eventb.core.predicate="KNOWN=dom(BIRTHDAY)" org.eventb.core.source="/Birthday Book/birthday_book_m0.bum|org.eventb.core.machineFile#birthday_book_m0|org.eventb.core.invariant#,"/>
+<org.eventb.core.poPredicate name="PERSON_SEW" org.eventb.core.predicate="CARDS∈ℙ(PERSON)" org.eventb.core.source="/Birthday Book/birthday_book_m0.bum|org.eventb.core.machineFile#birthday_book_m0|org.eventb.core.invariant#3"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="82">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#EVTALLHYPbirthday_book_c9"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ℤ×PERSON))∈1 ‥ 0 → PERSON" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.invariant#9"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Birthday Book/birthday_book_m0.bum|org.eventb.core.machineFile#birthday_book_m0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.event#3"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.invariant#9"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="82">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#EVTALLHYPbirthday_book_c9"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ℤ×DATE))∈1 ‥ 0 → DATE" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Birthday Book/birthday_book_m0.bum|org.eventb.core.machineFile#birthday_book_m0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.event#3"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="82">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#EVTALLHYPbirthday_book_c9"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈ℕ" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.invariant#="/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Birthday Book/birthday_book_m0.bum|org.eventb.core.machineFile#birthday_book_m0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.event#3"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.invariant#="/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="82">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#EVTALLHYPbirthday_book_c9"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{n⦂PERSON·n∈PERSON∧n∈ran(∅ ⦂ ℙ(ℤ×PERSON)) ∣ n}=(∅ ⦂ ℙ(PERSON))" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.invariant#&gt;"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Birthday Book/birthday_book_m0.bum|org.eventb.core.machineFile#birthday_book_m0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.event#3"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.invariant#&gt;"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="82">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#EVTALLHYPbirthday_book_c9"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(PERSON))⊆ran(∅ ⦂ ℙ(ℤ×PERSON))" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.invariant#?"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Birthday Book/birthday_book_m0.bum|org.eventb.core.machineFile#birthday_book_m0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.event#3"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.invariant#?"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poSequent#INITIALISATION\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTbirthday_book_c9" org.eventb.core.parentSet="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="NEW_CARDS'" org.eventb.core.type="ℙ(PERSON)"/>
+<org.eventb.core.poIdentifier name="KNOWN'" org.eventb.core.type="ℙ(PERSON)"/>
+<org.eventb.core.poIdentifier name="BIRTHDAY'" org.eventb.core.type="ℙ(PERSON×DATE)"/>
+<org.eventb.core.poIdentifier name="DATE_SET'" org.eventb.core.type="ℙ(ℤ×DATE)"/>
+<org.eventb.core.poIdentifier name="S'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="CARDS'" org.eventb.core.type="ℙ(PERSON)"/>
+<org.eventb.core.poIdentifier name="PERSON_SET'" org.eventb.core.type="ℙ(ℤ×PERSON)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPbirthday_book_c9" org.eventb.core.parentSet="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#EVTIDENTbirthday_book_c9" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="ADD_BIRTHDAY/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="82">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#EVTALLHYPbirthday_book_c:"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="PERSON_SET∪{S+1 ↦ name}∈1 ‥ S+1 → PERSON" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.invariant#9"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Birthday Book/birthday_book_m0.bum|org.eventb.core.machineFile#birthday_book_m0|org.eventb.core.event#-"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.event#4"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.invariant#9"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poSequent#ADD_BIRTHDAY\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ADD_BIRTHDAY/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="82">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#EVTALLHYPbirthday_book_c:"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="DATE_SET∪{S+1 ↦ date}∈1 ‥ S+1 → DATE" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Birthday Book/birthday_book_m0.bum|org.eventb.core.machineFile#birthday_book_m0|org.eventb.core.event#-"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.event#4"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poSequent#ADD_BIRTHDAY\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ADD_BIRTHDAY/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="82">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#EVTALLHYPbirthday_book_c:"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="S+1∈ℕ" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.invariant#="/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Birthday Book/birthday_book_m0.bum|org.eventb.core.machineFile#birthday_book_m0|org.eventb.core.event#-"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.event#4"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.invariant#="/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poSequent#ADD_BIRTHDAY\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ADD_BIRTHDAY/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="82">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#EVTALLHYPbirthday_book_c:"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{n⦂PERSON·n∈PERSON∧n∈ran(PERSON_SET∪{S+1 ↦ name}) ∣ n}=KNOWN∪{name}" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.invariant#&gt;"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Birthday Book/birthday_book_m0.bum|org.eventb.core.machineFile#birthday_book_m0|org.eventb.core.event#-"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.event#4"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.invariant#&gt;"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poSequent#ADD_BIRTHDAY\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ADD_BIRTHDAY/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="82">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#EVTALLHYPbirthday_book_c:"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="NEW_CARDS⊆ran(PERSON_SET∪{S+1 ↦ name})" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.invariant#?"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Birthday Book/birthday_book_m0.bum|org.eventb.core.machineFile#birthday_book_m0|org.eventb.core.event#-"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.event#4"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.invariant#?"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poSequent#ADD_BIRTHDAY\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTbirthday_book_c:" org.eventb.core.parentSet="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="82">
+<org.eventb.core.poIdentifier name="KNOWN'" org.eventb.core.type="ℙ(PERSON)"/>
+<org.eventb.core.poIdentifier name="date" org.eventb.core.type="DATE"/>
+<org.eventb.core.poIdentifier name="name" org.eventb.core.type="PERSON"/>
+<org.eventb.core.poIdentifier name="BIRTHDAY'" org.eventb.core.type="ℙ(PERSON×DATE)"/>
+<org.eventb.core.poIdentifier name="DATE_SET'" org.eventb.core.type="ℙ(ℤ×DATE)"/>
+<org.eventb.core.poIdentifier name="S'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="PERSON_SET'" org.eventb.core.type="ℙ(ℤ×PERSON)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPbirthday_book_c:" org.eventb.core.parentSet="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#EVTIDENTbirthday_book_c:" org.eventb.core.poStamp="82">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="name∈PERSON" org.eventb.core.source="/Birthday Book/birthday_book_m0.bum|org.eventb.core.machineFile#birthday_book_m0|org.eventb.core.event#-|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="date∈DATE" org.eventb.core.source="/Birthday Book/birthday_book_m0.bum|org.eventb.core.machineFile#birthday_book_m0|org.eventb.core.event#-|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="name∉KNOWN" org.eventb.core.source="/Birthday Book/birthday_book_m0.bum|org.eventb.core.machineFile#birthday_book_m0|org.eventb.core.event#-|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="name∉ran(PERSON_SET)" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.event#4|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="CHANGE_BIRTHDAY/grd6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="86">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#EVTHYPbirthday_book_c;namh"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(dom(PERSON_SET ▷ {name}))" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.event#5|org.eventb.core.guard#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.event#5|org.eventb.core.guard#,"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#EVTHYPbirthday_book_c;namh"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="CHANGE_BIRTHDAY/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="86">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#EVTALLHYPbirthday_book_c;"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="DATE_SET{min(PERSON_SET∼[ran(PERSON_SET ▷ {name})]) ↦ date}∈1 ‥ S → DATE" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Birthday Book/birthday_book_m0.bum|org.eventb.core.machineFile#birthday_book_m0|org.eventb.core.event#4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.event#5"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poSequent#CHANGE_BIRTHDAY\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="CHANGE_BIRTHDAY/act2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="87">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#EVTALLHYPbirthday_book_c;"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="PERSON_SET∼[ran(PERSON_SET ▷ {name})]≠(∅ ⦂ ℙ(ℤ))∧(∃b⦂ℤ·∀x⦂ℤ·x∈PERSON_SET∼[ran(PERSON_SET ▷ {name})]⇒b≤x)" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.event#5|org.eventb.core.action#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.event#5|org.eventb.core.action#-"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#EVTALLHYPbirthday_book_c;"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTbirthday_book_c;" org.eventb.core.parentSet="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="85">
+<org.eventb.core.poIdentifier name="date" org.eventb.core.type="DATE"/>
+<org.eventb.core.poIdentifier name="name" org.eventb.core.type="PERSON"/>
+<org.eventb.core.poIdentifier name="BIRTHDAY'" org.eventb.core.type="ℙ(PERSON×DATE)"/>
+<org.eventb.core.poIdentifier name="DATE_SET'" org.eventb.core.type="ℙ(ℤ×DATE)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPbirthday_book_c;namh" org.eventb.core.parentSet="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#EVTIDENTbirthday_book_c;" org.eventb.core.poStamp="85">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="name∈PERSON" org.eventb.core.source="/Birthday Book/birthday_book_m0.bum|org.eventb.core.machineFile#birthday_book_m0|org.eventb.core.event#4|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="date∈DATE" org.eventb.core.source="/Birthday Book/birthday_book_m0.bum|org.eventb.core.machineFile#birthday_book_m0|org.eventb.core.event#4|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="name∈KNOWN" org.eventb.core.source="/Birthday Book/birthday_book_m0.bum|org.eventb.core.machineFile#birthday_book_m0|org.eventb.core.event#4|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="S&gt;0" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.event#5|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="name∈ran(PERSON_SET)" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.event#5|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPbirthday_book_c;" org.eventb.core.parentSet="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#EVTHYPbirthday_book_c;namh" org.eventb.core.poStamp="85">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="card(dom(PERSON_SET ▷ {name}))=1" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.event#5|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="REMIND/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="82">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#EVTALLHYPbirthday_book_c="/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ran(DATE_SET∼[{date}] ◁ PERSON_SET)⊆ran(PERSON_SET)" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.invariant#?"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Birthday Book/birthday_book_m0.bum|org.eventb.core.machineFile#birthday_book_m0|org.eventb.core.event#1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.event#6"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.invariant#?"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poSequent#REMIND\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTbirthday_book_c=" org.eventb.core.parentSet="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="82">
+<org.eventb.core.poIdentifier name="NEW_CARDS'" org.eventb.core.type="ℙ(PERSON)"/>
+<org.eventb.core.poIdentifier name="date" org.eventb.core.type="DATE"/>
+<org.eventb.core.poIdentifier name="CARDS'" org.eventb.core.type="ℙ(PERSON)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPbirthday_book_c=" org.eventb.core.parentSet="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#EVTIDENTbirthday_book_c=" org.eventb.core.poStamp="82">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="date∈DATE" org.eventb.core.source="/Birthday Book/birthday_book_m0.bum|org.eventb.core.machineFile#birthday_book_m0|org.eventb.core.event#1|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="S&gt;0" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.event#6|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Birthday Book/birthday_book_m1.bpo|org.eventb.core.poFile#birthday_book_m1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="82">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="PERSON_SET∈1 ‥ S → PERSON" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.invariant#9"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="DATE_SET∈1 ‥ S → DATE" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.invariant#:"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="S∈ℕ" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.invariant#="/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="{n⦂PERSON·n∈PERSON∧n∈ran(PERSON_SET) ∣ n}=KNOWN" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.invariant#&gt;"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="NEW_CARDS⊆ran(PERSON_SET)" org.eventb.core.source="/Birthday Book/birthday_book_m1.bum|org.eventb.core.machineFile#birthday_book_m1|org.eventb.core.invariant#?"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

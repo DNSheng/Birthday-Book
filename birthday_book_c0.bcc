@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="finite(PERSON)" org.eventb.core.source="/Birthday Book/birthday_book_c0.buc|org.eventb.core.contextFile#birthday_book_c0|org.eventb.core.axiom#)" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="finite(DATE)" org.eventb.core.source="/Birthday Book/birthday_book_c0.buc|org.eventb.core.contextFile#birthday_book_c0|org.eventb.core.axiom#*" org.eventb.core.theorem="false"/>
+<org.eventb.core.scCarrierSet name="DATE" org.eventb.core.source="/Birthday Book/birthday_book_c0.buc|org.eventb.core.contextFile#birthday_book_c0|org.eventb.core.carrierSet#(" org.eventb.core.type="ℙ(DATE)"/>
+<org.eventb.core.scCarrierSet name="PERSON" org.eventb.core.source="/Birthday Book/birthday_book_c0.buc|org.eventb.core.contextFile#birthday_book_c0|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(PERSON)"/>
+</org.eventb.core.scContextFile>

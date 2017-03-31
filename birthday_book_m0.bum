@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="BIRTHDAY ≔ ∅" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="KNOWN ≔ ∅" org.eventb.core.label="act2"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="CARDS ≔ ∅" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="(" org.eventb.core.identifier="BIRTHDAY"/>
+<org.eventb.core.invariant name=")" org.eventb.core.label="inv1" org.eventb.core.predicate="BIRTHDAY ∈ PERSON ⇸ DATE"/>
+<org.eventb.core.seesContext name="*" org.eventb.core.target="birthday_book_c0"/>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="KNOWN"/>
+<org.eventb.core.invariant name="," org.eventb.core.label="inv2" org.eventb.core.predicate="KNOWN = dom(BIRTHDAY)"/>
+<org.eventb.core.event name="-" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ADD_BIRTHDAY">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="name"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="date"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="BIRTHDAY ≔ BIRTHDAY ∪ {name ↦ date}" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="name ∈ PERSON"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="date ∈ DATE"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="name ∉ KNOWN"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="KNOWN ≔ KNOWN ∪ {name}" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="4" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="CHANGE_BIRTHDAY">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="name"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="date"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="name ∈ PERSON"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="date ∈ DATE"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="name ∈ KNOWN"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="BIRTHDAY ≔ BIRTHDAY  {name ↦ date}" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="REMIND">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="date"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="date ∈ DATE"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="CARDS ≔ {n ∣ n ∈ KNOWN ∧ BIRTHDAY(n) = date}" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="2" org.eventb.core.identifier="CARDS"/>
+<org.eventb.core.invariant name="3" org.eventb.core.label="inv3" org.eventb.core.predicate="CARDS ∈ ℙ(PERSON)"/>
+</org.eventb.core.machineFile>
