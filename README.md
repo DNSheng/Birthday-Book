@@ -1,1 +1,1 @@
-My first thing
+3342 Finished first refinement (arrays)
