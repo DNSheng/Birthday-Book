@@ -49,7 +49,7 @@
 <org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="somedate ∈ DATE"/>
 <org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="INDEX &lt; S"/>
 <org.eventb.core.guard name="/" org.eventb.core.label="grd5" org.eventb.core.predicate="NCARDS &lt; S"/>
-<org.eventb.core.guard name=")" org.eventb.core.comment="The date matches at INDEX in DATE_SET" org.eventb.core.label="grd4" org.eventb.core.predicate="somedate ∈ ran({INDEX} ◁ DATE_SET)"/>
+<org.eventb.core.guard name=")" org.eventb.core.comment="The date matches at INDEX in DATE_SET" org.eventb.core.label="grd4" org.eventb.core.predicate="somedate = DATE_SET(INDEX + 1)"/>
 <org.eventb.core.action name="." org.eventb.core.assignment="NCARDS ≔ NCARDS + 1" org.eventb.core.label="act2"/>
 <org.eventb.core.action name="0" org.eventb.core.assignment="CARD_LIST ≔ CARD_LIST ∪ {NCARDS + 1 ↦ PERSON_SET(INDEX + 1)}" org.eventb.core.label="act3"/>
 </org.eventb.core.event>
@@ -58,7 +58,8 @@
 <org.eventb.core.action name="(" org.eventb.core.assignment="INDEX ≔ INDEX + 1" org.eventb.core.label="act1"/>
 <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="somedate ∈ DATE"/>
 <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="INDEX &lt; S"/>
-<org.eventb.core.guard name=")" org.eventb.core.comment="The date doesn't match at INDEX in DATE_SET" org.eventb.core.label="grd4" org.eventb.core.predicate="somedate ∉ ran({INDEX} ◁ DATE_SET)"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd5" org.eventb.core.predicate="NCARDS &lt; S"/>
+<org.eventb.core.guard name=")" org.eventb.core.comment="The date doesn't match at INDEX in DATE_SET" org.eventb.core.label="grd4" org.eventb.core.predicate="somedate ≠ DATE_SET(INDEX + 1)"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="O" org.eventb.core.comment="Final event for REMIND, exit" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="REMIND_EXIT">
 <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="REMIND_IN_PROGRESS = TRUE"/>
