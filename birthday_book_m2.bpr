@@ -351,23 +351,23 @@
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="0≤0"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="0≤0+1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="REMIND_FOUND/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18" org.eventb.core.prSets="DATE,PERSON">
+<org.eventb.core.prProof name="REMIND_FOUND/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19" org.eventb.core.prSets="DATE,PERSON">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p19"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p20"/>
-<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p21"/>
-<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p22"/>
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p20"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p17" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p22"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p23"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p20" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p11,p8,p17,p14,p6,p5,p10,p2,p15,p3,p7,p12,p1,p9,p13,p18,p23">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p21" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p24"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p11,p8,p18,p15,p6,p5,p10,p2,p16,p3,p7,p12,p13,p9,p1,p14,p19,p24">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -385,32 +385,33 @@
 <org.eventb.core.prIdent name="REMIND_IN_PROGRESS" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="S" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="somedate" org.eventb.core.type="DATE"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="INDEX≤S"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="NCARDS∈ℕ"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="CARD_LIST∈1 ‥ NCARDS → PERSON"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(PERSON)"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="{n⦂PERSON·⊤∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="S∈ℕ"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="CARDS∈ℙ(PERSON)">
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="{n⦂PERSON·⊤∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="CARDS∈ℙ(PERSON)">
 <org.eventb.core.prIdent name="CARDS" org.eventb.core.type="ℙ(PERSON)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="somedate∈DATE"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="somedate∈DATE"/>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="DATE_SET∈1 ‥ S → DATE"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="ran(CARD_LIST)⊆ran(PERSON_SET)"/>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="BIRTHDAY∈PERSON ⇸ DATE"/>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="REMIND_IN_PROGRESS=TRUE"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="INDEX≤S+1"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="NCARDS&lt;S"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="NCARDS≤S"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="ran(PERSON_SET)=KNOWN"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="INDEX+1∈ℕ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="INDEX&lt;S"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(PERSON)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="S∈ℕ"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="ran(CARD_LIST)⊆ran(PERSON_SET)"/>
 <org.eventb.core.prPred name="p10" org.eventb.core.predicate="NEW_CARDS⊆ran(PERSON_SET)"/>
 <org.eventb.core.prPred name="p11" org.eventb.core.predicate="finite(DATE)"/>
 <org.eventb.core.prPred name="p12" org.eventb.core.predicate="INDEX∈ℕ"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="NCARDS&lt;S"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="PERSON_SET∈1 ‥ S → PERSON"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="NCARDS≤S"/>
-<org.eventb.core.prPred name="p23" org.eventb.core.predicate="ran(PERSON_SET)=KNOWN"/>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="REMIND_IN_PROGRESS∈BOOL"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="INDEX+1∈ℕ"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="{n⦂PERSON·n∈PERSON∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="KNOWN=dom(BIRTHDAY)"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="somedate∈ran({INDEX} ◁ DATE_SET)"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="PERSON_SET∈1 ‥ S → PERSON"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="REMIND_IN_PROGRESS∈BOOL"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="{n⦂PERSON·n∈PERSON∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="KNOWN=dom(BIRTHDAY)"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="somedate∈ran({INDEX} ◁ DATE_SET)"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
@@ -426,7 +427,7 @@
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p21" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p24"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p5,p12,p9,p18,p15,p7,p6,p11,p3,p16,p4,p8,p13,p1,p10,p2,p14,p19,p24">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p11,p8,p18,p15,p6,p5,p10,p2,p16,p3,p7,p12,p13,p9,p1,p14,p19,p24">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -444,28 +445,28 @@
 <org.eventb.core.prIdent name="REMIND_IN_PROGRESS" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="S" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="somedate" org.eventb.core.type="DATE"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="NCARDS∈ℕ"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="CARD_LIST∈1 ‥ NCARDS → PERSON"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="NCARDS∈ℕ"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="CARD_LIST∈1 ‥ NCARDS → PERSON"/>
 <org.eventb.core.prPred name="p21" org.eventb.core.predicate="{n⦂PERSON·⊤∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
 <org.eventb.core.prPred name="p20" org.eventb.core.predicate="CARDS∈ℙ(PERSON)">
 <org.eventb.core.prIdent name="CARDS" org.eventb.core.type="ℙ(PERSON)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p23" org.eventb.core.predicate="somedate∈DATE"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="DATE_SET∈1 ‥ S → DATE"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="INDEX+1≤S"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="BIRTHDAY∈PERSON ⇸ DATE"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="REMIND_IN_PROGRESS=TRUE"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="DATE_SET∈1 ‥ S → DATE"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="BIRTHDAY∈PERSON ⇸ DATE"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="REMIND_IN_PROGRESS=TRUE"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="INDEX≤S+1"/>
 <org.eventb.core.prPred name="p14" org.eventb.core.predicate="NCARDS&lt;S"/>
 <org.eventb.core.prPred name="p16" org.eventb.core.predicate="NCARDS≤S"/>
 <org.eventb.core.prPred name="p24" org.eventb.core.predicate="ran(PERSON_SET)=KNOWN"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="INDEX≤S"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="INDEX&lt;S"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(PERSON)"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="S∈ℕ"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="ran(CARD_LIST)⊆ran(PERSON_SET)"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="NEW_CARDS⊆ran(PERSON_SET)"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="finite(DATE)"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="INDEX∈ℕ"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="INDEX+1≤S+1"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="INDEX&lt;S"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(PERSON)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="S∈ℕ"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="ran(CARD_LIST)⊆ran(PERSON_SET)"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="NEW_CARDS⊆ran(PERSON_SET)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="finite(DATE)"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="INDEX∈ℕ"/>
 <org.eventb.core.prPred name="p15" org.eventb.core.predicate="PERSON_SET∈1 ‥ S → PERSON"/>
 <org.eventb.core.prPred name="p22" org.eventb.core.predicate="REMIND_IN_PROGRESS∈BOOL"/>
 <org.eventb.core.prPred name="p17" org.eventb.core.predicate="{n⦂PERSON·n∈PERSON∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
@@ -477,22 +478,22 @@
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="ADD_BIRTHDAY/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18" org.eventb.core.prSets="DATE,PERSON">
 <org.eventb.core.lang name="L"/>
-<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p19"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p9" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p20"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p21">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p19"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p8" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p20"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p21"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p22"/>
-<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p23"/>
-<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p24"/>
-<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p25"/>
-<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p26"/>
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p22"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p24"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p25"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p26"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p27"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p22" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p27"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p12,p10,p18,p14,p7,p5,p11,p2,p15,p3,p8,p13,p1,p17,p19,p20,p27">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p23" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p28"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p21" org.eventb.core.prHyps="p3,p11,p9,p18,p14,p6,p4,p10,p1,p15,p2,p7,p12,p13,p17,p19,p20,p28">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -512,59 +513,60 @@
 <org.eventb.core.prIdent name="REMIND_IN_PROGRESS" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="S" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="name" org.eventb.core.type="PERSON"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="NCARDS∈ℕ"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="CARD_LIST∈1 ‥ NCARDS → PERSON"/>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="{n⦂PERSON·⊤∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="CARDS∈ℙ(PERSON)">
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="NCARDS∈ℕ"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="CARD_LIST∈1 ‥ NCARDS → PERSON"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="{n⦂PERSON·⊤∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="CARDS∈ℙ(PERSON)">
 <org.eventb.core.prIdent name="CARDS" org.eventb.core.type="ℙ(PERSON)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="name∉KNOWN"/>
-<org.eventb.core.prPred name="p24" org.eventb.core.predicate="somedate∈DATE">
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="name∉KNOWN"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="somedate∈DATE">
 <org.eventb.core.prIdent name="somedate" org.eventb.core.type="DATE"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="DATE_SET∈1 ‥ S → DATE"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="BIRTHDAY∈PERSON ⇸ DATE"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="INDEX≤S+1"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="DATE_SET∈1 ‥ S → DATE"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="BIRTHDAY∈PERSON ⇸ DATE"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="INDEX≤S+1"/>
 <org.eventb.core.prPred name="p15" org.eventb.core.predicate="NCARDS≤S"/>
-<org.eventb.core.prPred name="p26" org.eventb.core.predicate="date∈DATE">
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="date∈DATE">
 <org.eventb.core.prIdent name="date" org.eventb.core.type="DATE"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p27" org.eventb.core.predicate="ran(PERSON_SET)=KNOWN"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="ran(PERSON_SET)=KNOWN"/>
 <org.eventb.core.prPred name="p17" org.eventb.core.predicate="REMIND_IN_PROGRESS=FALSE"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="INDEX≤S"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(PERSON)"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="S∈ℕ"/>
-<org.eventb.core.prPred name="p25" org.eventb.core.predicate="name∈PERSON"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="INDEX≤S+1+1"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="finite(PERSON)"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="S∈ℕ"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="name∈PERSON"/>
 <org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬name∈KNOWN"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="ran(CARD_LIST)⊆ran(PERSON_SET)"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="name∉ran(PERSON_SET)"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="ran(CARD_LIST)⊆ran(PERSON_SET)"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="name∉ran(PERSON_SET)"/>
 <org.eventb.core.prPred name="p20" org.eventb.core.predicate="¬name∈ran(PERSON_SET)"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="NEW_CARDS⊆ran(PERSON_SET)"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="finite(DATE)"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="INDEX∈ℕ"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="NEW_CARDS⊆ran(PERSON_SET)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="finite(DATE)"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="INDEX∈ℕ"/>
 <org.eventb.core.prPred name="p14" org.eventb.core.predicate="PERSON_SET∈1 ‥ S → PERSON"/>
-<org.eventb.core.prPred name="p23" org.eventb.core.predicate="REMIND_IN_PROGRESS∈BOOL"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="REMIND_IN_PROGRESS∈BOOL"/>
 <org.eventb.core.prPred name="p16" org.eventb.core.predicate="{n⦂PERSON·n∈PERSON∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="INDEX≤(S+1)+1"/>
 <org.eventb.core.prPred name="p18" org.eventb.core.predicate="KNOWN=dom(BIRTHDAY)"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="REMIND_NOT_FOUND/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16" org.eventb.core.prSets="DATE,PERSON">
+<org.eventb.core.prProof name="REMIND_NOT_FOUND/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18" org.eventb.core.prSets="DATE,PERSON">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p17"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p18" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p19"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p18"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p15" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p19"/>
-<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p20"/>
-<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p21"/>
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p20"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p22"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p23"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p19" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p22"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p11,p8,p16,p13,p6,p5,p10,p2,p14,p3,p7,p12,p1,p9,p22">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p21" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p24"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p11,p8,p17,p14,p6,p5,p10,p2,p15,p3,p7,p12,p13,p9,p1,p19,p24">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -583,173 +585,175 @@
 <org.eventb.core.prIdent name="PERSON_SET" org.eventb.core.type="ℙ(ℤ×PERSON)"/>
 <org.eventb.core.prIdent name="REMIND_IN_PROGRESS" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="S" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="INDEX≤S"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prIdent name="somedate" org.eventb.core.type="DATE"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="NCARDS∈ℕ"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="CARD_LIST∈1 ‥ NCARDS → PERSON"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(PERSON)"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="{n⦂PERSON·⊤∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="S∈ℕ"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="CARDS∈ℙ(PERSON)">
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="{n⦂PERSON·⊤∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="CARDS∈ℙ(PERSON)">
 <org.eventb.core.prIdent name="CARDS" org.eventb.core.type="ℙ(PERSON)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="somedate∈DATE">
-<org.eventb.core.prIdent name="somedate" org.eventb.core.type="DATE"/>
-</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="somedate∈DATE"/>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="DATE_SET∈1 ‥ S → DATE"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="ran(CARD_LIST)⊆ran(PERSON_SET)"/>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="BIRTHDAY∈PERSON ⇸ DATE"/>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="REMIND_IN_PROGRESS=TRUE"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="NEW_CARDS⊆ran(PERSON_SET)"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="finite(DATE)"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="INDEX∈ℕ"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="PERSON_SET∈1 ‥ S → PERSON"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="NCARDS≤S"/>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="ran(PERSON_SET)=KNOWN"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="REMIND_IN_PROGRESS∈BOOL"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="INDEX≤S+1"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="NCARDS≤S"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="ran(PERSON_SET)=KNOWN"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬somedate∈ran({INDEX} ◁ DATE_SET)"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="INDEX+1∈ℕ"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="{n⦂PERSON·n∈PERSON∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="KNOWN=dom(BIRTHDAY)"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-</org.eventb.core.prProof>
-<org.eventb.core.prProof name="REMIND_NOT_FOUND/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17" org.eventb.core.prSets="DATE,PERSON">
-<org.eventb.core.lang name="L"/>
-<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p18"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p19"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p20"/>
-<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p21"/>
-<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p22"/>
-<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p20" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p5,p12,p9,p17,p14,p7,p6,p11,p3,p15,p4,p8,p13,p1,p10,p2,p23">
-<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-<org.eventb.core.prIdent name="BIRTHDAY" org.eventb.core.type="ℙ(PERSON×DATE)"/>
-<org.eventb.core.prIdent name="CARD_LIST" org.eventb.core.type="ℙ(ℤ×PERSON)"/>
-<org.eventb.core.prIdent name="DATE_SET" org.eventb.core.type="ℙ(ℤ×DATE)"/>
-<org.eventb.core.prIdent name="INDEX" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="KNOWN" org.eventb.core.type="ℙ(PERSON)"/>
-<org.eventb.core.prIdent name="NCARDS" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="NEW_CARDS" org.eventb.core.type="ℙ(PERSON)"/>
-<org.eventb.core.prIdent name="PERSON_SET" org.eventb.core.type="ℙ(ℤ×PERSON)"/>
-<org.eventb.core.prIdent name="REMIND_IN_PROGRESS" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="S" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="INDEX≤S"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="INDEX&lt;S"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="⊤"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="NCARDS∈ℕ"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="CARD_LIST∈1 ‥ NCARDS → PERSON"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(PERSON)"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="{n⦂PERSON·⊤∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="S∈ℕ"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="CARDS∈ℙ(PERSON)">
-<org.eventb.core.prIdent name="CARDS" org.eventb.core.type="ℙ(PERSON)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="somedate∈DATE">
-<org.eventb.core.prIdent name="somedate" org.eventb.core.type="DATE"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="DATE_SET∈1 ‥ S → DATE"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="INDEX+1≤S"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="ran(CARD_LIST)⊆ran(PERSON_SET)"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="BIRTHDAY∈PERSON ⇸ DATE"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="REMIND_IN_PROGRESS=TRUE"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="NEW_CARDS⊆ran(PERSON_SET)"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="finite(DATE)"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="INDEX∈ℕ"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="PERSON_SET∈1 ‥ S → PERSON"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="NCARDS≤S"/>
-<org.eventb.core.prPred name="p23" org.eventb.core.predicate="ran(PERSON_SET)=KNOWN"/>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="REMIND_IN_PROGRESS∈BOOL"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="{n⦂PERSON·n∈PERSON∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="KNOWN=dom(BIRTHDAY)"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-</org.eventb.core.prProof>
-<org.eventb.core.prProof name="REMIND_FOUND/VAR" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18" org.eventb.core.prSets="DATE,PERSON">
-<org.eventb.core.lang name="L"/>
-<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p19"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p20"/>
-<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p21"/>
-<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p22"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p20" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p11,p8,p17,p14,p6,p5,p10,p2,p15,p3,p7,p12,p1,p9,p13,p18,p23">
-<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-<org.eventb.core.prIdent name="BIRTHDAY" org.eventb.core.type="ℙ(PERSON×DATE)"/>
-<org.eventb.core.prIdent name="CARD_LIST" org.eventb.core.type="ℙ(ℤ×PERSON)"/>
-<org.eventb.core.prIdent name="DATE_SET" org.eventb.core.type="ℙ(ℤ×DATE)"/>
-<org.eventb.core.prIdent name="INDEX" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="KNOWN" org.eventb.core.type="ℙ(PERSON)"/>
-<org.eventb.core.prIdent name="NCARDS" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="NEW_CARDS" org.eventb.core.type="ℙ(PERSON)"/>
-<org.eventb.core.prIdent name="PERSON_SET" org.eventb.core.type="ℙ(ℤ×PERSON)"/>
-<org.eventb.core.prIdent name="REMIND_IN_PROGRESS" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="S" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="somedate" org.eventb.core.type="DATE"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="INDEX≤S"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="NCARDS∈ℕ"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="CARD_LIST∈1 ‥ NCARDS → PERSON"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="INDEX&lt;S"/>
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(PERSON)"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="{n⦂PERSON·⊤∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="S∈ℕ"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="CARDS∈ℙ(PERSON)">
-<org.eventb.core.prIdent name="CARDS" org.eventb.core.type="ℙ(PERSON)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="somedate∈DATE"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="DATE_SET∈1 ‥ S → DATE"/>
 <org.eventb.core.prPred name="p7" org.eventb.core.predicate="ran(CARD_LIST)⊆ran(PERSON_SET)"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="BIRTHDAY∈PERSON ⇸ DATE"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="REMIND_IN_PROGRESS=TRUE"/>
 <org.eventb.core.prPred name="p10" org.eventb.core.predicate="NEW_CARDS⊆ran(PERSON_SET)"/>
 <org.eventb.core.prPred name="p11" org.eventb.core.predicate="finite(DATE)"/>
 <org.eventb.core.prPred name="p12" org.eventb.core.predicate="INDEX∈ℕ"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="NCARDS&lt;S"/>
 <org.eventb.core.prPred name="p14" org.eventb.core.predicate="PERSON_SET∈1 ‥ S → PERSON"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="NCARDS≤S"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="S − (INDEX+1)&lt;S − INDEX"/>
-<org.eventb.core.prPred name="p23" org.eventb.core.predicate="ran(PERSON_SET)=KNOWN"/>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="REMIND_IN_PROGRESS∈BOOL"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="REMIND_IN_PROGRESS∈BOOL"/>
 <org.eventb.core.prPred name="p16" org.eventb.core.predicate="{n⦂PERSON·n∈PERSON∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
 <org.eventb.core.prPred name="p17" org.eventb.core.predicate="KNOWN=dom(BIRTHDAY)"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="somedate∈ran({INDEX} ◁ DATE_SET)"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="somedate∉ran({INDEX} ◁ DATE_SET)"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="REMIND_NOT_FOUND/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18" org.eventb.core.prSets="DATE,PERSON">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p18" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p19"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p20"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p22"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p23"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p21" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p24"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p11,p8,p17,p14,p6,p5,p10,p2,p15,p3,p7,p12,p13,p9,p1,p19,p24">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="BIRTHDAY" org.eventb.core.type="ℙ(PERSON×DATE)"/>
+<org.eventb.core.prIdent name="CARD_LIST" org.eventb.core.type="ℙ(ℤ×PERSON)"/>
+<org.eventb.core.prIdent name="DATE_SET" org.eventb.core.type="ℙ(ℤ×DATE)"/>
+<org.eventb.core.prIdent name="INDEX" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="KNOWN" org.eventb.core.type="ℙ(PERSON)"/>
+<org.eventb.core.prIdent name="NCARDS" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="NEW_CARDS" org.eventb.core.type="ℙ(PERSON)"/>
+<org.eventb.core.prIdent name="PERSON_SET" org.eventb.core.type="ℙ(ℤ×PERSON)"/>
+<org.eventb.core.prIdent name="REMIND_IN_PROGRESS" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="S" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="somedate" org.eventb.core.type="DATE"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="NCARDS∈ℕ"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="CARD_LIST∈1 ‥ NCARDS → PERSON"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="{n⦂PERSON·⊤∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="CARDS∈ℙ(PERSON)">
+<org.eventb.core.prIdent name="CARDS" org.eventb.core.type="ℙ(PERSON)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="somedate∈DATE"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="DATE_SET∈1 ‥ S → DATE"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="BIRTHDAY∈PERSON ⇸ DATE"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="REMIND_IN_PROGRESS=TRUE"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="INDEX≤S+1"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="NCARDS≤S"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="ran(PERSON_SET)=KNOWN"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬somedate∈ran({INDEX} ◁ DATE_SET)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="INDEX+1≤S+1"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="INDEX&lt;S"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(PERSON)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="S∈ℕ"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="ran(CARD_LIST)⊆ran(PERSON_SET)"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="NEW_CARDS⊆ran(PERSON_SET)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="finite(DATE)"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="INDEX∈ℕ"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="PERSON_SET∈1 ‥ S → PERSON"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="REMIND_IN_PROGRESS∈BOOL"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="{n⦂PERSON·n∈PERSON∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="KNOWN=dom(BIRTHDAY)"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="somedate∉ran({INDEX} ◁ DATE_SET)"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="REMIND_FOUND/VAR" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19" org.eventb.core.prSets="DATE,PERSON">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p20"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p17" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p22"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p23"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p21" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p24"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p11,p8,p18,p15,p6,p5,p10,p2,p16,p3,p7,p12,p13,p9,p1,p14,p19,p24">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="BIRTHDAY" org.eventb.core.type="ℙ(PERSON×DATE)"/>
+<org.eventb.core.prIdent name="CARD_LIST" org.eventb.core.type="ℙ(ℤ×PERSON)"/>
+<org.eventb.core.prIdent name="DATE_SET" org.eventb.core.type="ℙ(ℤ×DATE)"/>
+<org.eventb.core.prIdent name="INDEX" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="KNOWN" org.eventb.core.type="ℙ(PERSON)"/>
+<org.eventb.core.prIdent name="NCARDS" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="NEW_CARDS" org.eventb.core.type="ℙ(PERSON)"/>
+<org.eventb.core.prIdent name="PERSON_SET" org.eventb.core.type="ℙ(ℤ×PERSON)"/>
+<org.eventb.core.prIdent name="REMIND_IN_PROGRESS" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="S" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="somedate" org.eventb.core.type="DATE"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="NCARDS∈ℕ"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="CARD_LIST∈1 ‥ NCARDS → PERSON"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="{n⦂PERSON·⊤∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="CARDS∈ℙ(PERSON)">
+<org.eventb.core.prIdent name="CARDS" org.eventb.core.type="ℙ(PERSON)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="somedate∈DATE"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="DATE_SET∈1 ‥ S → DATE"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="BIRTHDAY∈PERSON ⇸ DATE"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="REMIND_IN_PROGRESS=TRUE"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="INDEX≤S+1"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="NCARDS&lt;S"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="NCARDS≤S"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="S − (INDEX+1)&lt;S − INDEX"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="ran(PERSON_SET)=KNOWN"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="INDEX&lt;S"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(PERSON)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="S∈ℕ"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="ran(CARD_LIST)⊆ran(PERSON_SET)"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="NEW_CARDS⊆ran(PERSON_SET)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="finite(DATE)"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="INDEX∈ℕ"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="PERSON_SET∈1 ‥ S → PERSON"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="REMIND_IN_PROGRESS∈BOOL"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="{n⦂PERSON·n∈PERSON∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="KNOWN=dom(BIRTHDAY)"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="somedate∈ran({INDEX} ◁ DATE_SET)"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="REMIND_FOUND/NAT" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18" org.eventb.core.prSets="DATE,PERSON">
+<org.eventb.core.prProof name="REMIND_FOUND/NAT" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19" org.eventb.core.prSets="DATE,PERSON">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p19"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p20"/>
-<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p21"/>
-<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p22"/>
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p20"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p17" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p22"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p23"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p20" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p11,p8,p17,p14,p6,p5,p10,p2,p15,p3,p7,p12,p1,p9,p13,p18,p23">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p21" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p24"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p11,p8,p18,p15,p6,p5,p10,p2,p16,p3,p7,p12,p13,p9,p1,p14,p19,p24">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -767,51 +771,52 @@
 <org.eventb.core.prIdent name="REMIND_IN_PROGRESS" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="S" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="somedate" org.eventb.core.type="DATE"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="INDEX≤S"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="S − INDEX∈ℕ"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="NCARDS∈ℕ"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="CARD_LIST∈1 ‥ NCARDS → PERSON"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(PERSON)"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="{n⦂PERSON·⊤∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="S∈ℕ"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="CARDS∈ℙ(PERSON)">
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="{n⦂PERSON·⊤∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="CARDS∈ℙ(PERSON)">
 <org.eventb.core.prIdent name="CARDS" org.eventb.core.type="ℙ(PERSON)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="somedate∈DATE"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="somedate∈DATE"/>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="DATE_SET∈1 ‥ S → DATE"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="ran(CARD_LIST)⊆ran(PERSON_SET)"/>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="BIRTHDAY∈PERSON ⇸ DATE"/>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="REMIND_IN_PROGRESS=TRUE"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="INDEX≤S+1"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="NCARDS&lt;S"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="NCARDS≤S"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="ran(PERSON_SET)=KNOWN"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="INDEX&lt;S"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="S − INDEX∈ℕ"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(PERSON)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="S∈ℕ"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="ran(CARD_LIST)⊆ran(PERSON_SET)"/>
 <org.eventb.core.prPred name="p10" org.eventb.core.predicate="NEW_CARDS⊆ran(PERSON_SET)"/>
 <org.eventb.core.prPred name="p11" org.eventb.core.predicate="finite(DATE)"/>
 <org.eventb.core.prPred name="p12" org.eventb.core.predicate="INDEX∈ℕ"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="NCARDS&lt;S"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="PERSON_SET∈1 ‥ S → PERSON"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="NCARDS≤S"/>
-<org.eventb.core.prPred name="p23" org.eventb.core.predicate="ran(PERSON_SET)=KNOWN"/>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="REMIND_IN_PROGRESS∈BOOL"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="{n⦂PERSON·n∈PERSON∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="KNOWN=dom(BIRTHDAY)"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="somedate∈ran({INDEX} ◁ DATE_SET)"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="PERSON_SET∈1 ‥ S → PERSON"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="REMIND_IN_PROGRESS∈BOOL"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="{n⦂PERSON·n∈PERSON∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="KNOWN=dom(BIRTHDAY)"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="somedate∈ran({INDEX} ◁ DATE_SET)"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="REMIND_NOT_FOUND/VAR" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16" org.eventb.core.prSets="DATE,PERSON">
+<org.eventb.core.prProof name="REMIND_NOT_FOUND/VAR" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18" org.eventb.core.prSets="DATE,PERSON">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p17"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p18" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p19"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p18"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p15" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p19"/>
-<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p20"/>
-<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p21"/>
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p20"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p22"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p23"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p19" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p22"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p11,p8,p16,p13,p6,p5,p10,p2,p14,p3,p7,p12,p1,p9,p22">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p21" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p24"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p11,p8,p17,p14,p6,p5,p10,p2,p15,p3,p7,p12,p13,p9,p1,p19,p24">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -830,52 +835,53 @@
 <org.eventb.core.prIdent name="PERSON_SET" org.eventb.core.type="ℙ(ℤ×PERSON)"/>
 <org.eventb.core.prIdent name="REMIND_IN_PROGRESS" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="S" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="INDEX≤S"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prIdent name="somedate" org.eventb.core.type="DATE"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="NCARDS∈ℕ"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="CARD_LIST∈1 ‥ NCARDS → PERSON"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(PERSON)"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="{n⦂PERSON·⊤∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="S∈ℕ"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="CARDS∈ℙ(PERSON)">
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="{n⦂PERSON·⊤∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="CARDS∈ℙ(PERSON)">
 <org.eventb.core.prIdent name="CARDS" org.eventb.core.type="ℙ(PERSON)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="somedate∈DATE">
-<org.eventb.core.prIdent name="somedate" org.eventb.core.type="DATE"/>
-</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="somedate∈DATE"/>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="DATE_SET∈1 ‥ S → DATE"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="ran(CARD_LIST)⊆ran(PERSON_SET)"/>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="BIRTHDAY∈PERSON ⇸ DATE"/>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="REMIND_IN_PROGRESS=TRUE"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="INDEX≤S+1"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="NCARDS≤S"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="S − (INDEX+1)&lt;S − INDEX"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="ran(PERSON_SET)=KNOWN"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬somedate∈ran({INDEX} ◁ DATE_SET)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="INDEX&lt;S"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(PERSON)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="S∈ℕ"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="ran(CARD_LIST)⊆ran(PERSON_SET)"/>
 <org.eventb.core.prPred name="p10" org.eventb.core.predicate="NEW_CARDS⊆ran(PERSON_SET)"/>
 <org.eventb.core.prPred name="p11" org.eventb.core.predicate="finite(DATE)"/>
 <org.eventb.core.prPred name="p12" org.eventb.core.predicate="INDEX∈ℕ"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="PERSON_SET∈1 ‥ S → PERSON"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="NCARDS≤S"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="S − (INDEX+1)&lt;S − INDEX"/>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="ran(PERSON_SET)=KNOWN"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="REMIND_IN_PROGRESS∈BOOL"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="{n⦂PERSON·n∈PERSON∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="KNOWN=dom(BIRTHDAY)"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="PERSON_SET∈1 ‥ S → PERSON"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="REMIND_IN_PROGRESS∈BOOL"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="{n⦂PERSON·n∈PERSON∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="KNOWN=dom(BIRTHDAY)"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="somedate∉ran({INDEX} ◁ DATE_SET)"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="REMIND_NOT_FOUND/NAT" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16" org.eventb.core.prSets="DATE,PERSON">
+<org.eventb.core.prProof name="REMIND_NOT_FOUND/NAT" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18" org.eventb.core.prSets="DATE,PERSON">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p17"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p18" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p19"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p18"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p15" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p19"/>
-<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p20"/>
-<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p21"/>
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p20"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p22"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p23"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p19" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p22"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p11,p8,p16,p13,p6,p5,p10,p2,p14,p3,p7,p12,p1,p9,p22">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p21" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p24"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p11,p8,p17,p14,p6,p5,p10,p2,p15,p3,p7,p12,p13,p9,p1,p19,p24">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -894,33 +900,34 @@
 <org.eventb.core.prIdent name="PERSON_SET" org.eventb.core.type="ℙ(ℤ×PERSON)"/>
 <org.eventb.core.prIdent name="REMIND_IN_PROGRESS" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="S" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="INDEX≤S"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="S − INDEX∈ℕ"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prIdent name="somedate" org.eventb.core.type="DATE"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="NCARDS∈ℕ"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="CARD_LIST∈1 ‥ NCARDS → PERSON"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(PERSON)"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="{n⦂PERSON·⊤∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="S∈ℕ"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="CARDS∈ℙ(PERSON)">
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="{n⦂PERSON·⊤∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="CARDS∈ℙ(PERSON)">
 <org.eventb.core.prIdent name="CARDS" org.eventb.core.type="ℙ(PERSON)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="somedate∈DATE">
-<org.eventb.core.prIdent name="somedate" org.eventb.core.type="DATE"/>
-</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="somedate∈DATE"/>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="DATE_SET∈1 ‥ S → DATE"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="ran(CARD_LIST)⊆ran(PERSON_SET)"/>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="BIRTHDAY∈PERSON ⇸ DATE"/>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="REMIND_IN_PROGRESS=TRUE"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="INDEX≤S+1"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="NCARDS≤S"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="ran(PERSON_SET)=KNOWN"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬somedate∈ran({INDEX} ◁ DATE_SET)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="INDEX&lt;S"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="S − INDEX∈ℕ"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(PERSON)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="S∈ℕ"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="ran(CARD_LIST)⊆ran(PERSON_SET)"/>
 <org.eventb.core.prPred name="p10" org.eventb.core.predicate="NEW_CARDS⊆ran(PERSON_SET)"/>
 <org.eventb.core.prPred name="p11" org.eventb.core.predicate="finite(DATE)"/>
 <org.eventb.core.prPred name="p12" org.eventb.core.predicate="INDEX∈ℕ"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="PERSON_SET∈1 ‥ S → PERSON"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="NCARDS≤S"/>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="ran(PERSON_SET)=KNOWN"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="REMIND_IN_PROGRESS∈BOOL"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="{n⦂PERSON·n∈PERSON∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="KNOWN=dom(BIRTHDAY)"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="PERSON_SET∈1 ‥ S → PERSON"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="REMIND_IN_PROGRESS∈BOOL"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="{n⦂PERSON·n∈PERSON∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="KNOWN=dom(BIRTHDAY)"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="somedate∉ran({INDEX} ◁ DATE_SET)"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
@@ -949,11 +956,11 @@
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p19" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p22"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with INDEX=S+1" org.eventb.core.prHyps="p7">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with INDEX=S" org.eventb.core.prHyps="p3">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p1" org.eventb.core.prInfHyps="p23"/>
-<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p1"/>
-<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p12,p9,p17,p14,p6,p5,p11,p2,p15,p3,p8,p13,p1,p10,p7,p22,p23">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p13" org.eventb.core.prInfHyps="p23"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p11,p8,p17,p14,p6,p5,p10,p1,p15,p2,p7,p12,p13,p9,p3,p22,p23">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -972,33 +979,33 @@
 <org.eventb.core.prIdent name="PERSON_SET" org.eventb.core.type="ℙ(ℤ×PERSON)"/>
 <org.eventb.core.prIdent name="REMIND_IN_PROGRESS" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="S" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="INDEX≤S"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="NCARDS∈ℕ"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="CARD_LIST∈1 ‥ NCARDS → PERSON"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="NCARDS∈ℕ"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="CARD_LIST∈1 ‥ NCARDS → PERSON"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="INDEX=S"/>
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(PERSON)"/>
 <org.eventb.core.prPred name="p19" org.eventb.core.predicate="{n⦂PERSON·⊤∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="S∈ℕ"/>
 <org.eventb.core.prPred name="p18" org.eventb.core.predicate="CARDS∈ℙ(PERSON)">
 <org.eventb.core.prIdent name="CARDS" org.eventb.core.type="ℙ(PERSON)"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="S≤S+1"/>
 <org.eventb.core.prPred name="p21" org.eventb.core.predicate="somedate∈DATE">
 <org.eventb.core.prIdent name="somedate" org.eventb.core.type="DATE"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="DATE_SET∈1 ‥ S → DATE"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="INDEX=S+1"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="ran(CARD_LIST)⊆ran(PERSON_SET)"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="BIRTHDAY∈PERSON ⇸ DATE"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="REMIND_IN_PROGRESS=TRUE"/>
-<org.eventb.core.prPred name="p23" org.eventb.core.predicate="S+1≤S"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="NEW_CARDS⊆ran(PERSON_SET)"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="finite(DATE)"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="INDEX∈ℕ"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="0≤S"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="ran(CARD_LIST)⊆ran(PERSON_SET)"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="BIRTHDAY∈PERSON ⇸ DATE"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="REMIND_IN_PROGRESS=TRUE"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="NEW_CARDS⊆ran(PERSON_SET)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="finite(DATE)"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="INDEX∈ℕ"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="INDEX≤S+1"/>
 <org.eventb.core.prPred name="p14" org.eventb.core.predicate="PERSON_SET∈1 ‥ S → PERSON"/>
 <org.eventb.core.prPred name="p15" org.eventb.core.predicate="NCARDS≤S"/>
 <org.eventb.core.prPred name="p22" org.eventb.core.predicate="ran(PERSON_SET)=KNOWN"/>
 <org.eventb.core.prPred name="p20" org.eventb.core.predicate="REMIND_IN_PROGRESS∈BOOL"/>
 <org.eventb.core.prPred name="p16" org.eventb.core.predicate="{n⦂PERSON·n∈PERSON∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="0≤S+1"/>
 <org.eventb.core.prPred name="p17" org.eventb.core.predicate="KNOWN=dom(BIRTHDAY)"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
@@ -1030,7 +1037,7 @@
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="REMIND_START/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="n" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18" org.eventb.core.prSets="DATE,PERSON">
 <org.eventb.core.lang name="L"/>
-<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p9">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p8">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p19">
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p19" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p20">
@@ -1048,7 +1055,7 @@
 <org.eventb.core.prIdent name="n" org.eventb.core.type="PERSON"/>
 <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⇒ goal" org.eventb.core.prGoal="p26" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p28" org.eventb.core.prHyps="p27">
-<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p28" org.eventb.core.prHyps="p5,p11,p9,p18,p13,p7,p6,p10,p2,p14,p3,p8,p12,p1,p15,p17,p4,p25,p27">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p28" org.eventb.core.prHyps="p4,p10,p8,p18,p13,p6,p5,p9,p1,p14,p2,p7,p11,p12,p15,p17,p3,p25,p27">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -1073,8 +1080,8 @@
 <org.eventb.core.prIdent name="PERSON_SET" org.eventb.core.type="ℙ(ℤ×PERSON)"/>
 <org.eventb.core.prIdent name="REMIND_IN_PROGRESS" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="S" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="NCARDS∈ℕ"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="CARD_LIST∈1 ‥ NCARDS → PERSON"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="NCARDS∈ℕ"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="CARD_LIST∈1 ‥ NCARDS → PERSON"/>
 <org.eventb.core.prPred name="p19" org.eventb.core.predicate="∀n⦂PERSON·n∈KNOWN⇒n∈dom(BIRTHDAY)∧⊤"/>
 <org.eventb.core.prPred name="p22" org.eventb.core.predicate="{n⦂PERSON·⊤∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
 <org.eventb.core.prPred name="p21" org.eventb.core.predicate="CARDS∈ℙ(PERSON)">
@@ -1083,23 +1090,23 @@
 <org.eventb.core.prPred name="p24" org.eventb.core.predicate="somedate∈DATE">
 <org.eventb.core.prIdent name="somedate" org.eventb.core.type="DATE"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="DATE_SET∈1 ‥ S → DATE"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="DATE_SET∈1 ‥ S → DATE"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀n⦂PERSON·n∈KNOWN⇒n∈dom(BIRTHDAY)∧BIRTHDAY∈PERSON ⇸ DATE"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="BIRTHDAY∈PERSON ⇸ DATE"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="BIRTHDAY∈PERSON ⇸ DATE"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="INDEX≤S+1"/>
 <org.eventb.core.prPred name="p14" org.eventb.core.predicate="NCARDS≤S"/>
 <org.eventb.core.prPred name="p25" org.eventb.core.predicate="ran(PERSON_SET)=KNOWN"/>
 <org.eventb.core.prPred name="p17" org.eventb.core.predicate="REMIND_IN_PROGRESS=FALSE"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="INDEX≤S"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="INDEX=0"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="INDEX=0"/>
 <org.eventb.core.prPred name="p27" org.eventb.core.predicate="n∈KNOWN">
 <org.eventb.core.prIdent name="n" org.eventb.core.type="PERSON"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(PERSON)"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="S∈ℕ"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="ran(CARD_LIST)⊆ran(PERSON_SET)"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="NEW_CARDS⊆ran(PERSON_SET)"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="finite(DATE)"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="INDEX∈ℕ"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(PERSON)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="S∈ℕ"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="ran(CARD_LIST)⊆ran(PERSON_SET)"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="NEW_CARDS⊆ran(PERSON_SET)"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="finite(DATE)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="INDEX∈ℕ"/>
 <org.eventb.core.prPred name="p13" org.eventb.core.predicate="PERSON_SET∈1 ‥ S → PERSON"/>
 <org.eventb.core.prPred name="p20" org.eventb.core.predicate="∀n⦂PERSON·n∈KNOWN⇒n∈dom(BIRTHDAY)"/>
 <org.eventb.core.prPred name="p28" org.eventb.core.predicate="n∈dom(BIRTHDAY)">
@@ -1218,18 +1225,18 @@
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="REMIND_FOUND/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18" org.eventb.core.prSets="DATE,PERSON">
+<org.eventb.core.prProof name="REMIND_FOUND/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19" org.eventb.core.prSets="DATE,PERSON">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p19"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p20"/>
-<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p21"/>
-<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p22"/>
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p20"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p17" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p22"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p23"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p20" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p11,p8,p17,p14,p6,p5,p10,p2,p15,p3,p7,p12,p1,p9,p13,p18,p23">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p21" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p24"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p11,p8,p18,p15,p6,p5,p10,p2,p16,p3,p7,p12,p13,p9,p1,p14,p19,p24">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -1247,48 +1254,49 @@
 <org.eventb.core.prIdent name="REMIND_IN_PROGRESS" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="S" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="somedate" org.eventb.core.type="DATE"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="INDEX≤S"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="NCARDS∈ℕ"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="CARD_LIST∈1 ‥ NCARDS → PERSON"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="{n⦂PERSON·⊤∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="CARDS∈ℙ(PERSON)">
+<org.eventb.core.prIdent name="CARDS" org.eventb.core.type="ℙ(PERSON)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="somedate∈DATE"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="DATE_SET∈1 ‥ S → DATE"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="BIRTHDAY∈PERSON ⇸ DATE"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="REMIND_IN_PROGRESS=TRUE"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="INDEX≤S+1"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="NCARDS&lt;S"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="NCARDS≤S"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="ran(PERSON_SET)=KNOWN"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="INDEX&lt;S"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="NCARDS+1∈ℕ"/>
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(PERSON)"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="{n⦂PERSON·⊤∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="S∈ℕ"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="CARDS∈ℙ(PERSON)">
-<org.eventb.core.prIdent name="CARDS" org.eventb.core.type="ℙ(PERSON)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="somedate∈DATE"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="DATE_SET∈1 ‥ S → DATE"/>
 <org.eventb.core.prPred name="p7" org.eventb.core.predicate="ran(CARD_LIST)⊆ran(PERSON_SET)"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="BIRTHDAY∈PERSON ⇸ DATE"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="REMIND_IN_PROGRESS=TRUE"/>
 <org.eventb.core.prPred name="p10" org.eventb.core.predicate="NEW_CARDS⊆ran(PERSON_SET)"/>
 <org.eventb.core.prPred name="p11" org.eventb.core.predicate="finite(DATE)"/>
 <org.eventb.core.prPred name="p12" org.eventb.core.predicate="INDEX∈ℕ"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="NCARDS&lt;S"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="PERSON_SET∈1 ‥ S → PERSON"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="NCARDS≤S"/>
-<org.eventb.core.prPred name="p23" org.eventb.core.predicate="ran(PERSON_SET)=KNOWN"/>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="REMIND_IN_PROGRESS∈BOOL"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="{n⦂PERSON·n∈PERSON∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="KNOWN=dom(BIRTHDAY)"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="somedate∈ran({INDEX} ◁ DATE_SET)"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="PERSON_SET∈1 ‥ S → PERSON"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="REMIND_IN_PROGRESS∈BOOL"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="{n⦂PERSON·n∈PERSON∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="KNOWN=dom(BIRTHDAY)"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="somedate∈ran({INDEX} ◁ DATE_SET)"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="REMIND_FOUND/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18" org.eventb.core.prSets="DATE,PERSON">
+<org.eventb.core.prProof name="REMIND_FOUND/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19" org.eventb.core.prSets="DATE,PERSON">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p19"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p20"/>
-<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p21"/>
-<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p22"/>
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p20"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p17" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p22"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p23"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p20" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p11,p8,p17,p14,p6,p5,p10,p2,p15,p3,p7,p12,p1,p9,p13,p18,p23">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p21" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p24"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p11,p8,p18,p15,p6,p5,p10,p2,p16,p3,p7,p12,p13,p9,p1,p14,p19,p24">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -1306,51 +1314,52 @@
 <org.eventb.core.prIdent name="REMIND_IN_PROGRESS" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="S" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="somedate" org.eventb.core.type="DATE"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="INDEX≤S"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="NCARDS∈ℕ"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="CARD_LIST∈1 ‥ NCARDS → PERSON"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(PERSON)"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="{n⦂PERSON·⊤∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="S∈ℕ"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="CARDS∈ℙ(PERSON)">
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="{n⦂PERSON·⊤∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="CARDS∈ℙ(PERSON)">
 <org.eventb.core.prIdent name="CARDS" org.eventb.core.type="ℙ(PERSON)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="somedate∈DATE"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="somedate∈DATE"/>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="DATE_SET∈1 ‥ S → DATE"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="ran(CARD_LIST)⊆ran(PERSON_SET)"/>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="BIRTHDAY∈PERSON ⇸ DATE"/>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="REMIND_IN_PROGRESS=TRUE"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="INDEX≤S+1"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="NCARDS&lt;S"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="NCARDS≤S"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="NCARDS+1≤S"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="ran(PERSON_SET)=KNOWN"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="INDEX&lt;S"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(PERSON)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="S∈ℕ"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="ran(CARD_LIST)⊆ran(PERSON_SET)"/>
 <org.eventb.core.prPred name="p10" org.eventb.core.predicate="NEW_CARDS⊆ran(PERSON_SET)"/>
 <org.eventb.core.prPred name="p11" org.eventb.core.predicate="finite(DATE)"/>
 <org.eventb.core.prPred name="p12" org.eventb.core.predicate="INDEX∈ℕ"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="NCARDS&lt;S"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="PERSON_SET∈1 ‥ S → PERSON"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="NCARDS≤S"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="NCARDS+1≤S"/>
-<org.eventb.core.prPred name="p23" org.eventb.core.predicate="ran(PERSON_SET)=KNOWN"/>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="REMIND_IN_PROGRESS∈BOOL"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="{n⦂PERSON·n∈PERSON∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="KNOWN=dom(BIRTHDAY)"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="somedate∈ran({INDEX} ◁ DATE_SET)"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="PERSON_SET∈1 ‥ S → PERSON"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="REMIND_IN_PROGRESS∈BOOL"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="{n⦂PERSON·n∈PERSON∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="KNOWN=dom(BIRTHDAY)"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="somedate∈ran({INDEX} ◁ DATE_SET)"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="REMIND_FOUND/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21" org.eventb.core.prSets="DATE,PERSON" org.eventb.core.psManual="true">
+<org.eventb.core.prProof name="REMIND_FOUND/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19" org.eventb.core.prSets="DATE,PERSON" org.eventb.core.psManual="true">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p22"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p19" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23"/>
-<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p24"/>
-<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p25"/>
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p20"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p17" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p22"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p23"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p23" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p26"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p21" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p24"/>
 <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="sl/ds" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p5,p12,p10,p21,p15,p7,p6,p11,p4,p16,p8,p13,p1,p17,p18,p26"/>
-<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p3,p9,p2,p14,p20,p5,p12,p10,p21,p15,p7,p6,p11,p4,p16,p8,p13,p1,p17,p18,p26">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p25,p3,p4,p5,p6,p7,p9,p10,p11,p12,p14,p15,p26,p16,p24,p19"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p2,p8,p1,p13,p18,p3,p4,p5,p6,p7,p9,p10,p11,p12,p14,p15,p16,p24,p19">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R30000"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -1370,35 +1379,35 @@
 <org.eventb.core.prIdent name="REMIND_IN_PROGRESS" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="S" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="somedate" org.eventb.core.type="DATE"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="CARD_LIST∈1 ‥ NCARDS → PERSON"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="NCARDS∈ℕ"/>
-<org.eventb.core.prPred name="p23" org.eventb.core.predicate="{n⦂PERSON·⊤∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="CARDS∈ℙ(PERSON)">
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="CARD_LIST∈1 ‥ NCARDS → PERSON"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="NCARDS∈ℕ"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="{n⦂PERSON·⊤∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="CARDS∈ℙ(PERSON)">
 <org.eventb.core.prIdent name="CARDS" org.eventb.core.type="ℙ(PERSON)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p25" org.eventb.core.predicate="somedate∈DATE"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="DATE_SET∈1 ‥ S → DATE"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="REMIND_IN_PROGRESS=TRUE"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="BIRTHDAY∈PERSON ⇸ DATE"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="NCARDS&lt;S"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="NCARDS≤S"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="INDEX∈dom(PERSON_SET)"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="CARD_LIST∪{NCARDS+1 ↦ PERSON_SET(INDEX)}∈1 ‥ NCARDS+1 → PERSON"/>
-<org.eventb.core.prPred name="p26" org.eventb.core.predicate="ran(PERSON_SET)=KNOWN"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="INDEX≤S"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="INDEX&lt;S"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(PERSON)"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="S∈ℕ"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="ran(CARD_LIST)⊆ran(PERSON_SET)"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="NEW_CARDS⊆ran(PERSON_SET)"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="finite(DATE)"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="INDEX∈ℕ"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="PERSON_SET∈1 ‥ S → PERSON"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="PERSON_SET∈ℤ ⇸ PERSON"/>
-<org.eventb.core.prPred name="p24" org.eventb.core.predicate="REMIND_IN_PROGRESS∈BOOL"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="{n⦂PERSON·n∈PERSON∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="somedate∈ran({INDEX} ◁ DATE_SET)"/>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="KNOWN=dom(BIRTHDAY)"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="somedate∈DATE"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="DATE_SET∈1 ‥ S → DATE"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="REMIND_IN_PROGRESS=TRUE"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="BIRTHDAY∈PERSON ⇸ DATE"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="NCARDS&lt;S"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="NCARDS≤S"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="INDEX∈dom(PERSON_SET)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="CARD_LIST∪{NCARDS+1 ↦ PERSON_SET(INDEX+1)}∈1 ‥ NCARDS+1 → PERSON"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="ran(PERSON_SET)=KNOWN"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="INDEX≤S"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="INDEX&lt;S"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(PERSON)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="S∈ℕ"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="ran(CARD_LIST)⊆ran(PERSON_SET)"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="NEW_CARDS⊆ran(PERSON_SET)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="finite(DATE)"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="INDEX∈ℕ"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="PERSON_SET∈1 ‥ S → PERSON"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="PERSON_SET∈ℤ ⇸ PERSON"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="REMIND_IN_PROGRESS∈BOOL"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="{n⦂PERSON·n∈PERSON∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="somedate∈ran({INDEX} ◁ DATE_SET)"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="KNOWN=dom(BIRTHDAY)"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.mngHyp"/>
@@ -1415,7 +1424,7 @@
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p23" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p26"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p5,p12,p9,p20,p15,p7,p6,p11,p3,p16,p4,p8,p13,p1,p10,p2,p14,p21,p17,p18,p26">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p11,p8,p20,p15,p6,p5,p10,p2,p16,p3,p7,p12,p13,p9,p1,p14,p21,p18,p17,p26">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -1433,31 +1442,31 @@
 <org.eventb.core.prIdent name="REMIND_IN_PROGRESS" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="S" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="somedate" org.eventb.core.type="DATE"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="NCARDS∈ℕ"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="CARD_LIST∈1 ‥ NCARDS → PERSON"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="NCARDS∈ℕ"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="CARD_LIST∈1 ‥ NCARDS → PERSON"/>
 <org.eventb.core.prPred name="p23" org.eventb.core.predicate="{n⦂PERSON·⊤∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
 <org.eventb.core.prPred name="p22" org.eventb.core.predicate="CARDS∈ℙ(PERSON)">
 <org.eventb.core.prIdent name="CARDS" org.eventb.core.type="ℙ(PERSON)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p25" org.eventb.core.predicate="somedate∈DATE"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="DATE_SET∈1 ‥ S → DATE"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="BIRTHDAY∈PERSON ⇸ DATE"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="REMIND_IN_PROGRESS=TRUE"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="ran(CARD_LIST∪{NCARDS+1 ↦ PERSON_SET(INDEX)})⊆ran(PERSON_SET)"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="DATE_SET∈1 ‥ S → DATE"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="BIRTHDAY∈PERSON ⇸ DATE"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="REMIND_IN_PROGRESS=TRUE"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="INDEX≤S+1"/>
 <org.eventb.core.prPred name="p14" org.eventb.core.predicate="NCARDS&lt;S"/>
 <org.eventb.core.prPred name="p16" org.eventb.core.predicate="NCARDS≤S"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="INDEX∈dom(PERSON_SET)"/>
 <org.eventb.core.prPred name="p26" org.eventb.core.predicate="ran(PERSON_SET)=KNOWN"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="INDEX≤S"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="INDEX&lt;S"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(PERSON)"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="S∈ℕ"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="ran(CARD_LIST)⊆ran(PERSON_SET)"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="NEW_CARDS⊆ran(PERSON_SET)"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="finite(DATE)"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="INDEX∈ℕ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="INDEX&lt;S"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="ran(CARD_LIST∪{NCARDS+1 ↦ PERSON_SET(INDEX+1)})⊆ran(PERSON_SET)"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(PERSON)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="S∈ℕ"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="ran(CARD_LIST)⊆ran(PERSON_SET)"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="NEW_CARDS⊆ran(PERSON_SET)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="finite(DATE)"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="INDEX∈ℕ"/>
 <org.eventb.core.prPred name="p15" org.eventb.core.predicate="PERSON_SET∈1 ‥ S → PERSON"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="PERSON_SET∈ℤ ⇸ PERSON"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="PERSON_SET∈ℤ ⇸ PERSON"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="INDEX+1∈dom(PERSON_SET)"/>
 <org.eventb.core.prPred name="p24" org.eventb.core.predicate="REMIND_IN_PROGRESS∈BOOL"/>
 <org.eventb.core.prPred name="p19" org.eventb.core.predicate="{n⦂PERSON·n∈PERSON∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
 <org.eventb.core.prPred name="p20" org.eventb.core.predicate="KNOWN=dom(BIRTHDAY)"/>
@@ -1466,7 +1475,7 @@
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="REMIND_FOUND/act3/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19" org.eventb.core.prSets="DATE,PERSON" org.eventb.core.psManual="true">
+<org.eventb.core.prProof name="REMIND_FOUND/act3/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19" org.eventb.core.prSets="DATE,PERSON">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
@@ -1479,17 +1488,12 @@
 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p21" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p24"/>
 <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p25">
-<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="sl/ds" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p5,p12,p10,p19,p15,p7,p6,p11,p3,p16,p4,p8,p13,p1,p24"/>
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p25" org.eventb.core.prHyps="p9,p2,p14,p18,p5,p12,p10,p19,p15,p7,p6,p11,p3,p16,p4,p8,p13,p1,p24">
-<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R30000"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p25" org.eventb.core.prHyps="p4,p11,p8,p18,p15,p6,p5,p10,p2,p16,p3,p7,p12,p13,p9,p1,p14,p19,p24">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 <org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p26">
-<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p26" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p26" org.eventb.core.prHyps="p15"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -1507,40 +1511,39 @@
 <org.eventb.core.prIdent name="REMIND_IN_PROGRESS" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="S" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="somedate" org.eventb.core.type="DATE"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="NCARDS∈ℕ"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="CARD_LIST∈1 ‥ NCARDS → PERSON"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="INDEX∈dom(PERSON_SET)∧PERSON_SET∈ℤ ⇸ PERSON"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="NCARDS∈ℕ"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="CARD_LIST∈1 ‥ NCARDS → PERSON"/>
 <org.eventb.core.prPred name="p21" org.eventb.core.predicate="{n⦂PERSON·⊤∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
 <org.eventb.core.prPred name="p20" org.eventb.core.predicate="CARDS∈ℙ(PERSON)">
 <org.eventb.core.prIdent name="CARDS" org.eventb.core.type="ℙ(PERSON)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p23" org.eventb.core.predicate="somedate∈DATE"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="DATE_SET∈1 ‥ S → DATE"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="INDEX+1∈dom(PERSON_SET)∧PERSON_SET∈ℤ ⇸ PERSON"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="DATE_SET∈1 ‥ S → DATE"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="BIRTHDAY∈PERSON ⇸ DATE"/>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="REMIND_IN_PROGRESS=TRUE"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="BIRTHDAY∈PERSON ⇸ DATE"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="INDEX≤S+1"/>
 <org.eventb.core.prPred name="p14" org.eventb.core.predicate="NCARDS&lt;S"/>
 <org.eventb.core.prPred name="p16" org.eventb.core.predicate="NCARDS≤S"/>
-<org.eventb.core.prPred name="p25" org.eventb.core.predicate="INDEX∈dom(PERSON_SET)"/>
 <org.eventb.core.prPred name="p24" org.eventb.core.predicate="ran(PERSON_SET)=KNOWN"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="INDEX≤S"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="INDEX&lt;S"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(PERSON)"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="S∈ℕ"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="ran(CARD_LIST)⊆ran(PERSON_SET)"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="NEW_CARDS⊆ran(PERSON_SET)"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="finite(DATE)"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="INDEX∈ℕ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="INDEX&lt;S"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(PERSON)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="S∈ℕ"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="ran(CARD_LIST)⊆ran(PERSON_SET)"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="NEW_CARDS⊆ran(PERSON_SET)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="finite(DATE)"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="INDEX∈ℕ"/>
 <org.eventb.core.prPred name="p15" org.eventb.core.predicate="PERSON_SET∈1 ‥ S → PERSON"/>
 <org.eventb.core.prPred name="p26" org.eventb.core.predicate="PERSON_SET∈ℤ ⇸ PERSON"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="INDEX+1∈dom(PERSON_SET)"/>
 <org.eventb.core.prPred name="p22" org.eventb.core.predicate="REMIND_IN_PROGRESS∈BOOL"/>
 <org.eventb.core.prPred name="p17" org.eventb.core.predicate="{n⦂PERSON·n∈PERSON∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="somedate∈ran({INDEX} ◁ DATE_SET)"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="KNOWN=dom(BIRTHDAY)"/>
-<org.eventb.core.prReas name="r4" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="KNOWN=dom(BIRTHDAY)"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="somedate∈ran({INDEX} ◁ DATE_SET)"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
-<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.mngHyp"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="INITIALISATION/inv9/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="PERSON">
@@ -1813,22 +1816,12 @@
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p20" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with INDEX=0" org.eventb.core.prHyps="p4">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with INDEX=0" org.eventb.core.prHyps="p3">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p1" org.eventb.core.prInfHyps="p24"/>
-<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p1"/>
-<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p24" org.eventb.core.prHyps="p15" org.eventb.core.prInfHyps="p25"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p25"/>
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p5,p11,p9,p18,p13,p7,p6,p10,p2,p14,p3,p8,p12,p1,p15,p17,p4,p23">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p12" org.eventb.core.prInfHyps="p24"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p10,p8,p18,p13,p6,p5,p9,p1,p14,p2,p7,p11,p12,p15,p17,p3,p23,p24">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
@@ -1846,8 +1839,9 @@
 <org.eventb.core.prIdent name="PERSON_SET" org.eventb.core.type="ℙ(ℤ×PERSON)"/>
 <org.eventb.core.prIdent name="REMIND_IN_PROGRESS" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="S" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="NCARDS∈ℕ"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="CARD_LIST∈1 ‥ NCARDS → PERSON"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="1≤S+1"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="NCARDS∈ℕ"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="CARD_LIST∈1 ‥ NCARDS → PERSON"/>
 <org.eventb.core.prPred name="p20" org.eventb.core.predicate="{n⦂PERSON·⊤∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
 <org.eventb.core.prPred name="p19" org.eventb.core.predicate="CARDS∈ℙ(PERSON)">
 <org.eventb.core.prIdent name="CARDS" org.eventb.core.type="ℙ(PERSON)"/>
@@ -1855,31 +1849,168 @@
 <org.eventb.core.prPred name="p22" org.eventb.core.predicate="somedate∈DATE">
 <org.eventb.core.prIdent name="somedate" org.eventb.core.type="DATE"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="DATE_SET∈1 ‥ S → DATE"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="BIRTHDAY∈PERSON ⇸ DATE"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="DATE_SET∈1 ‥ S → DATE"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="BIRTHDAY∈PERSON ⇸ DATE"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="INDEX≤S+1"/>
 <org.eventb.core.prPred name="p14" org.eventb.core.predicate="NCARDS≤S"/>
 <org.eventb.core.prPred name="p23" org.eventb.core.predicate="ran(PERSON_SET)=KNOWN"/>
 <org.eventb.core.prPred name="p17" org.eventb.core.predicate="REMIND_IN_PROGRESS=FALSE"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="INDEX≤S"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="1≤S"/>
-<org.eventb.core.prPred name="p25" org.eventb.core.predicate="⊤"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="INDEX=0"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(PERSON)"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="S∈ℕ"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="ran(CARD_LIST)⊆ran(PERSON_SET)"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="NEW_CARDS⊆ran(PERSON_SET)"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="finite(DATE)"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="INDEX∈ℕ"/>
-<org.eventb.core.prPred name="p24" org.eventb.core.predicate="0≤S"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="0≤S+1"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="INDEX=0"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(PERSON)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="S∈ℕ"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="ran(CARD_LIST)⊆ran(PERSON_SET)"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="NEW_CARDS⊆ran(PERSON_SET)"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="finite(DATE)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="INDEX∈ℕ"/>
 <org.eventb.core.prPred name="p13" org.eventb.core.predicate="PERSON_SET∈1 ‥ S → PERSON"/>
 <org.eventb.core.prPred name="p15" org.eventb.core.predicate="S&gt;0"/>
 <org.eventb.core.prPred name="p21" org.eventb.core.predicate="REMIND_IN_PROGRESS∈BOOL"/>
 <org.eventb.core.prPred name="p16" org.eventb.core.predicate="{n⦂PERSON·n∈PERSON∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
 <org.eventb.core.prPred name="p18" org.eventb.core.predicate="KNOWN=dom(BIRTHDAY)"/>
-<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
-<org.eventb.core.prReas name="r4" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="REMIND_NOT_FOUND/grd3/THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="{n⦂PERSON·⊤∧n∈ran(PERSON_SET) ∣ n}=KNOWN">
+<org.eventb.core.prIdent name="KNOWN" org.eventb.core.type="ℙ(PERSON)"/>
+<org.eventb.core.prIdent name="PERSON" org.eventb.core.type="ℙ(PERSON)"/>
+<org.eventb.core.prIdent name="PERSON_SET" org.eventb.core.type="ℙ(ℤ×PERSON)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="ran(PERSON_SET)=KNOWN">
+<org.eventb.core.prIdent name="KNOWN" org.eventb.core.type="ℙ(PERSON)"/>
+<org.eventb.core.prIdent name="PERSON" org.eventb.core.type="ℙ(PERSON)"/>
+<org.eventb.core.prIdent name="PERSON_SET" org.eventb.core.type="ℙ(ℤ×PERSON)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="CARDS∈ℙ(PERSON)">
+<org.eventb.core.prIdent name="CARDS" org.eventb.core.type="ℙ(PERSON)"/>
+<org.eventb.core.prIdent name="PERSON" org.eventb.core.type="ℙ(PERSON)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="somedate∈DATE">
+<org.eventb.core.prIdent name="DATE" org.eventb.core.type="ℙ(DATE)"/>
+<org.eventb.core.prIdent name="somedate" org.eventb.core.type="DATE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="REMIND_IN_PROGRESS∈BOOL">
+<org.eventb.core.prIdent name="REMIND_IN_PROGRESS" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="{n⦂PERSON·n∈PERSON∧n∈ran(PERSON_SET) ∣ n}=KNOWN">
+<org.eventb.core.prIdent name="KNOWN" org.eventb.core.type="ℙ(PERSON)"/>
+<org.eventb.core.prIdent name="PERSON" org.eventb.core.type="ℙ(PERSON)"/>
+<org.eventb.core.prIdent name="PERSON_SET" org.eventb.core.type="ℙ(ℤ×PERSON)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="REMIND_EXIT/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="PERSON">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(ℤ×PERSON))∈1 ‥ 0 → PERSON"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="REMIND_EXIT/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="PERSON">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="PERSON_SET" org.eventb.core.type="ℙ(ℤ×PERSON)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="ran(∅ ⦂ ℙ(ℤ×PERSON))⊆ran(PERSON_SET)"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="REMIND_EXIT/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="0∈ℕ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="REMIND_EXIT/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17" org.eventb.core.prSets="DATE,PERSON">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p18"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p19"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p20"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p21"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p19" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p22"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p11,p8,p17,p14,p6,p5,p10,p1,p15,p2,p7,p12,p13,p9,p3,p22">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="BIRTHDAY" org.eventb.core.type="ℙ(PERSON×DATE)"/>
+<org.eventb.core.prIdent name="CARD_LIST" org.eventb.core.type="ℙ(ℤ×PERSON)"/>
+<org.eventb.core.prIdent name="DATE_SET" org.eventb.core.type="ℙ(ℤ×DATE)"/>
+<org.eventb.core.prIdent name="INDEX" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="KNOWN" org.eventb.core.type="ℙ(PERSON)"/>
+<org.eventb.core.prIdent name="NCARDS" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="NEW_CARDS" org.eventb.core.type="ℙ(PERSON)"/>
+<org.eventb.core.prIdent name="PERSON_SET" org.eventb.core.type="ℙ(ℤ×PERSON)"/>
+<org.eventb.core.prIdent name="REMIND_IN_PROGRESS" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="S" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="NCARDS∈ℕ"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="CARD_LIST∈1 ‥ NCARDS → PERSON"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="INDEX=S"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(PERSON)"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="{n⦂PERSON·⊤∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="S∈ℕ"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="CARDS∈ℙ(PERSON)">
+<org.eventb.core.prIdent name="CARDS" org.eventb.core.type="ℙ(PERSON)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="somedate∈DATE">
+<org.eventb.core.prIdent name="somedate" org.eventb.core.type="DATE"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="DATE_SET∈1 ‥ S → DATE"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="ran(CARD_LIST)⊆ran(PERSON_SET)"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="BIRTHDAY∈PERSON ⇸ DATE"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="REMIND_IN_PROGRESS=TRUE"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="NEW_CARDS⊆ran(PERSON_SET)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="finite(DATE)"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="INDEX∈ℕ"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="INDEX≤S+1"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="0≤S"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="PERSON_SET∈1 ‥ S → PERSON"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="NCARDS≤S"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="ran(PERSON_SET)=KNOWN"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="REMIND_IN_PROGRESS∈BOOL"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="{n⦂PERSON·n∈PERSON∧n∈ran(PERSON_SET) ∣ n}=KNOWN"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="KNOWN=dom(BIRTHDAY)"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 </org.eventb.core.prFile>

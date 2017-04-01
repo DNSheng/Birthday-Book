@@ -34,7 +34,6 @@
 <org.eventb.core.action name="internal3" org.eventb.core.assignment="REMIND_IN_PROGRESS ≔ TRUE" org.eventb.core.comment="Start convergent events" org.eventb.core.label="act3"/>
 <org.eventb.core.guard name="internal4" org.eventb.core.comment="Extra for strengthening" org.eventb.core.label="grd4" org.eventb.core.predicate="INDEX = 0"/>
 <org.eventb.core.witness name="internal5" org.eventb.core.label="date" org.eventb.core.predicate="date = somedate"/>
-<org.eventb.core.action name="internal6" org.eventb.core.assignment="INDEX ≔ 1" org.eventb.core.label="act4"/>
 </org.eventb.core.event>
 <org.eventb.core.variable name="E" org.eventb.core.identifier="CARD_LIST"/>
 <org.eventb.core.variable name="F" org.eventb.core.identifier="NCARDS"/>
@@ -52,7 +51,7 @@
 <org.eventb.core.guard name="/" org.eventb.core.label="grd5" org.eventb.core.predicate="NCARDS &lt; S"/>
 <org.eventb.core.guard name=")" org.eventb.core.comment="The date matches at INDEX in DATE_SET" org.eventb.core.label="grd4" org.eventb.core.predicate="somedate ∈ ran({INDEX} ◁ DATE_SET)"/>
 <org.eventb.core.action name="." org.eventb.core.assignment="NCARDS ≔ NCARDS + 1" org.eventb.core.label="act2"/>
-<org.eventb.core.action name="0" org.eventb.core.assignment="CARD_LIST ≔ CARD_LIST ∪ {NCARDS + 1 ↦ PERSON_SET(INDEX)}" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="CARD_LIST ≔ CARD_LIST ∪ {NCARDS + 1 ↦ PERSON_SET(INDEX + 1)}" org.eventb.core.label="act3"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="N" org.eventb.core.comment="Convergent iteration, date doesn't match" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="REMIND_NOT_FOUND">
 <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="REMIND_IN_PROGRESS = TRUE"/>
@@ -64,12 +63,14 @@
 <org.eventb.core.event name="O" org.eventb.core.comment="Final event for REMIND, exit" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="REMIND_EXIT">
 <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="REMIND_IN_PROGRESS = TRUE"/>
 <org.eventb.core.action name="(" org.eventb.core.assignment="REMIND_IN_PROGRESS ≔ FALSE" org.eventb.core.label="act1"/>
-<org.eventb.core.guard name=")" org.eventb.core.comment="Check for index reaching max value (end)" org.eventb.core.label="grd2" org.eventb.core.predicate="INDEX = S + 1"/>
+<org.eventb.core.guard name=")" org.eventb.core.comment="Check for index reaching max value (end)" org.eventb.core.label="grd2" org.eventb.core.predicate="INDEX = S "/>
 <org.eventb.core.action name="*" org.eventb.core.assignment="INDEX ≔ 0" org.eventb.core.comment="Reset the index variable to zero for next remind event" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="CARD_LIST ≔ ∅" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="NCARDS ≔ 0" org.eventb.core.label="act4"/>
 </org.eventb.core.event>
 <org.eventb.core.variable name="P" org.eventb.core.identifier="INDEX"/>
 <org.eventb.core.invariant name="Q" org.eventb.core.comment="Index is the iteration through PERSON_SET for REMIND" org.eventb.core.label="inv6" org.eventb.core.predicate="INDEX ∈ ℕ"/>
-<org.eventb.core.invariant name="R" org.eventb.core.comment="INDEX will must be less than or equal to S+1 throughout, as it can't go over and +1 is for auto increment in convergent" org.eventb.core.label="inv7" org.eventb.core.predicate="INDEX ≤ S"/>
+<org.eventb.core.invariant name="R" org.eventb.core.comment="INDEX will must be less than or equal to S+1 throughout, as it can't go over and +1 is for auto increment in convergent" org.eventb.core.label="inv7" org.eventb.core.predicate="INDEX ≤ S + 1"/>
 <org.eventb.core.variant name="S" org.eventb.core.expression="S − INDEX"/>
 <org.eventb.core.variable name="U" org.eventb.core.identifier="somedate"/>
 <org.eventb.core.invariant name="V" org.eventb.core.label="inv8" org.eventb.core.predicate="somedate ∈ DATE"/>
