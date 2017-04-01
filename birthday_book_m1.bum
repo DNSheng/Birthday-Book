@@ -16,7 +16,7 @@
 <org.eventb.core.action name="(" org.eventb.core.assignment="S ≔ S + 1" org.eventb.core.comment="Sets S to 1 initially" org.eventb.core.label="act3"/>
 <org.eventb.core.action name=")" org.eventb.core.assignment="PERSON_SET ≔ PERSON_SET ∪ {S+1 ↦ name}" org.eventb.core.label="act4"/>
 <org.eventb.core.action name="*" org.eventb.core.assignment="DATE_SET ≔ DATE_SET ∪ {S+1 ↦ date}" org.eventb.core.label="act5"/>
-<org.eventb.core.guard name="+" org.eventb.core.comment="MAYBE: Person is not in range of PERSON_SET, thus person is not already 'known'" org.eventb.core.label="grd4" org.eventb.core.predicate="name ∉ ran(PERSON_SET)"/>
+<org.eventb.core.guard name="+" org.eventb.core.comment="across PERSON_SET as p all p.name /= name end" org.eventb.core.label="grd4" org.eventb.core.predicate="name ∉ ran(PERSON_SET)"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="5" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="CHANGE_BIRTHDAY">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="CHANGE_BIRTHDAY"/>

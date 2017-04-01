@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.psFile>
+<org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="41" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="41" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="41" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="41" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="41" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="41" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="ADD_BIRTHDAY/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="41" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="ADD_BIRTHDAY/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="41" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="ADD_BIRTHDAY/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="41" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="REMIND_FOUND/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="REMIND_FOUND/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="REMIND_FOUND/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="REMIND_FOUND/NAT" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="REMIND_NOT_FOUND/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="REMIND_NOT_FOUND/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="REMIND_NOT_FOUND/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="REMIND_NOT_FOUND/NAT" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="REMIND_EXIT/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="45" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="REMIND_EXIT/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="45" org.eventb.core.psManual="false"/>
+</org.eventb.core.psFile>
